@@ -1,0 +1,16 @@
+clc,clear,close all
+
+rgb1 = imread('cameraman.bmp')
+f=figure()
+rgb2 = imrotate(rgb1,60)
+rgb3 = imrotate(rgb1,60,'bilinear')
+%rgb4 = imrotate(rgb1,60,'bilinear','crop')
+subplot(2,2,1)
+imshow(rgb1)
+title('origin')
+subplot(2,2,2)
+imshow(rgb2)
+title('nearest')
+subplot(2,2,3)
+imshow(rgb3)
+title('bilinear')
